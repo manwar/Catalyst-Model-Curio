@@ -63,6 +63,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/bluefeet/Catalyst-Model-Curio/issues"
+      },
+      "homepage" : "https://github.com/bluefeet/Catalyst-Model-Curio",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/bluefeet/Catalyst-Model-Curio.git",
+         "web" : "https://github.com/bluefeet/Catalyst-Model-Curio"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:BLUEFEET",
    "x_serialization_backend" : "JSON::PP version 4.02",
