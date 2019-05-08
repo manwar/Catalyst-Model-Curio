@@ -22,7 +22,7 @@ Catalyst-Model-Curio GitHub issue tracker:
 # AUTHORS
 
 ```
-Aran Clary Deltac <bluefeet@gmail.com>
+Aran Clary Deltac <aran@bluefeet.dev>
 ```
 
 # ACKNOWLEDGEMENTS
