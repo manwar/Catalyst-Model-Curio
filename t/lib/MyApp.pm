@@ -1,4 +1,6 @@
-package TestApp;
+package MyApp;
+
+use MyApp::TestLogger;
 
 use Moose;
 use strictures 2;
@@ -8,8 +10,10 @@ use Catalyst;
 
 extends 'Catalyst';
 
+__PACKAGE__->log( MyApp::TestLogger->new() );
+
 __PACKAGE__->config(
-    name => 'TestApp',
+    name => 'MyApp',
     disable_component_resolution_regex_fallback => 1,
 );
 

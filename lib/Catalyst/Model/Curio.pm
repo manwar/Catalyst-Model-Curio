@@ -28,14 +28,15 @@ use namespace::clean;
 
 extends 'Catalyst::Model';
 
+our $_KEY;
+
 sub BUILD {
     my ($self) = @_;
 
     # Get the Curio class loaded early.
     require_module( $self->class() );
 
-    # And get the Curio object instantiation happening early too.
-    $self->ACCEPT_CONTEXT() if $self->preload();
+    $self->_install_key_models();
 
     return;
 }
@@ -45,9 +46,35 @@ sub ACCEPT_CONTEXT {
 
     my $method = $self->method();
 
+    my $key = $self->key() || $_KEY;
+
     return $self->class->$method(
-        $self->key() ? $self->key() : ()
+        $key ? $key : (),
     );
+}
+
+sub _install_key_models {
+    my ($self) = @_;
+
+    return if $self->key();
+    return if !$self->class->factory->does_keys();
+
+    my $model_class = ref( $self );
+
+    my $model_name = $model_class;
+    $model_name =~ s{^.*::(?:Model|M)::}{};
+
+    foreach my $key (@{ $self->class->keys() }) {
+        no strict 'refs';
+
+        *{"$model_class\::$key\::ACCEPT_CONTEXT"} = sub{
+            my ($self, $c) = @_;
+            local $_KEY = $key;
+            return $c->model( $model_name );
+        };
+    }
+
+    return;
 }
 
 has class => (
@@ -65,12 +92,6 @@ has method => (
     is      => 'ro',
     isa     => NonEmptySimpleStr,
     default => 'fetch',
-);
-
-has preload => (
-    is      => 'ro',
-    isa     => Bool,
-    default => 1,
 );
 
 1;

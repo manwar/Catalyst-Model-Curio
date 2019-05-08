@@ -1,4 +1,4 @@
-package TestApp::Model::Cache;
+package MyApp::Model::KeyedCache;
 
 use Moo;
 use strictures 2;
@@ -7,7 +7,8 @@ use namespace::clean;
 extends 'Catalyst::Model::Curio';
 
 __PACKAGE__->config(
-    class => 'TestApp::Service::Cache',
+    class => 'MyApp::Service::MultiCache',
+    key   => 'test_keyed',
 );
 
 1;

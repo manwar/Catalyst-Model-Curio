@@ -1,9 +1,8 @@
-package TestApp::Service::Cache;
+package MyApp::FakeCHI;
 
-use Curio;
+use Moo;
 use strictures 2;
-
-does_caching;
+use namespace::clean;
 
 has _cache => (
     is       => 'ro',
