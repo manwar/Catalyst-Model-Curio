@@ -86,6 +86,8 @@ extends 'Catalyst::Model';
 
 our $_KEY;
 
+my %installed_key_model_classes;
+
 sub BUILD {
     my ($self) = @_;
 
@@ -116,6 +118,7 @@ sub _install_key_models {
     return if !$self->class->factory->does_keys();
 
     my $model_class = ref( $self );
+    return if $installed_key_model_classes{ $model_class };
 
     my $model_name = $model_class;
     $model_name =~ s{^.*::(?:Model|M)::}{};
@@ -129,6 +132,8 @@ sub _install_key_models {
             return $c->model( $model_name );
         };
     }
+
+    $installed_key_model_classes{ $model_class } = 1;
 
     return;
 }

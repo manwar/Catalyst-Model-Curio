@@ -94,6 +94,4 @@ sub default :Path {
     $c->res->body( 'Page not found' );
 }
 
-sub end : ActionClass('RenderView') {}
-
 1;
