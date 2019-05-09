@@ -72,9 +72,9 @@ See L<Catalyst::Model::Curio/SUPPORT>.
 
 See L<Catalyst::Model::Curio/AUTHORS>.
 
-=head1 LICENSE
+=head1 COPYRIGHT AND LICENSE
 
-See L<Catalyst::Model::Curio/LICENSE>.
+See L<Catalyst::Model::Curio/COPYRIGHT AND LICENSE>.
 
 =cut
 

@@ -103,12 +103,6 @@ Catalyst-Model-Curio GitHub issue tracker:
 
 [https://github.com/bluefeet/Catalyst-Model-Curio/issues](https://github.com/bluefeet/Catalyst-Model-Curio/issues)
 
-# AUTHORS
-
-```
-Aran Clary Deltac <aran@bluefeet.dev>
-```
-
 # ACKNOWLEDGEMENTS
 
 Thanks to [ZipRecruiter](https://www.ziprecruiter.com/)
@@ -116,7 +110,25 @@ for encouraging their employees to contribute back to the open
 source ecosystem.  Without their dedication to quality software
 development this distribution would not exist.
 
-# LICENSE
+# AUTHORS
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+```
+Aran Clary Deltac <aran@bluefeet.dev>
+```
+
+# COPYRIGHT AND LICENSE
+
+Copyright (C) 2019 Aran Clary Deltac
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see [http://www.gnu.org/licenses/](http://www.gnu.org/licenses/).
