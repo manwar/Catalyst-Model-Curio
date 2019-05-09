@@ -89,8 +89,6 @@ return the CHI object instead of the Curio object.
 
 # HANDLING KEYS
 
-There are several ways to handle keys in your Curio models.
-
 ## No Keys
 
 A Curio class which does not support keys just means you don't

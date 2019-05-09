@@ -175,8 +175,6 @@ __END__
 
 =head1 HANDLING KEYS
 
-There are several ways to handle keys in your Curio models.
-
 =head2 No Keys
 
 A Curio class which does not support keys just means you don't
