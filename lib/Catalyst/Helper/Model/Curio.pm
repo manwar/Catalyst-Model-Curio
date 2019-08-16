@@ -1,5 +1,5 @@
 package Catalyst::Helper::Model::Curio;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use strictures 2;
 
