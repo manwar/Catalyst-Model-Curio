@@ -2,6 +2,7 @@ Revision history for Perl extension Catalyst-Model-Curio.
 
 {{$NEXT}}
 
+ - Fix tests to work against the latest Curio, 0.08.
  - Rewrote the "method" config argument documentation.
 
 0.01 2019-05-09T06:55:36Z

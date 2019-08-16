@@ -50,7 +50,7 @@
             "Types::Common::String" : "1.002001",
             "Types::Standard" : "1.002001",
             "namespace::clean" : "0.27",
-            "perl" : "5.008001",
+            "perl" : "5.016001",
             "strictures" : "2.000001"
          }
       },
@@ -76,6 +76,6 @@
    },
    "version" : "0.01",
    "x_authority" : "cpan:BLUEFEET",
-   "x_serialization_backend" : "JSON::PP version 4.02",
+   "x_serialization_backend" : "JSON::PP version 4.04",
    "x_static_install" : 1
 }

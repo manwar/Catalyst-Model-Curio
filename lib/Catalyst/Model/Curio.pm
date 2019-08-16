@@ -86,7 +86,6 @@ sub _install_key_models {
     my ($self) = @_;
 
     return if $self->key();
-    return if !$self->class->factory->does_keys();
 
     my $model_class = ref( $self );
     return if $installed_key_model_classes{ $model_class };
@@ -94,7 +93,7 @@ sub _install_key_models {
     my $model_name = $model_class;
     $model_name =~ s{^.*::(?:Model|M)::}{};
 
-    foreach my $key (@{ $self->class->keys() }) {
+    foreach my $key (@{ $self->class->declared_keys() }) {
         no strict 'refs';
 
         *{"$model_class\::$key\::ACCEPT_CONTEXT"} = sub{
