@@ -130,7 +130,7 @@ development this distribution would not exist.
 # AUTHORS
 
 ```
-Aran Clary Deltac <aran@bluefeet.dev>
+Aran Clary Deltac <bluefeet@gmail.com>
 ```
 
 # COPYRIGHT AND LICENSE
